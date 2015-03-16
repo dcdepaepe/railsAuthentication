@@ -7,13 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<ul>
+	<ul class="mainNav">
 		<li><%= link_to 'Home', root_path %></li>
 		<li><%= link_to 'About', about_path %></li>
 		<li><%= link_to 'Cat Pictures', cats_path %></li>
 	</ul>
 
-<%= yield %>
+<div class="pageContent">
+  <div class="currentTime">
+    <%= "It is currently " + current_date_and_time %>
+  </div>
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>
