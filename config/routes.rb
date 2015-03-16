@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get '/about' => 'static#about'
 
-  get '/cat-pictures(/:number_of_cats)' => 'static#cats'
+  get '/cat-pictures(/:number_of_cats)', to: 'static#cats', as: 'cats'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

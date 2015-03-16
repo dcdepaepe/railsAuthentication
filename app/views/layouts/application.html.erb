@@ -8,9 +8,9 @@
 </head>
 <body>
 	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="/about">About</a></li>
-		<li><a href="/cat-pictures">Cat Pictures</a></li>
+		<li><%= link_to 'Home', root_path %></li>
+		<li><%= link_to 'About', about_path %></li>
+		<li><%= link_to 'Cat Pictures', cats_path %></li>
 	</ul>
 
 <%= yield %>
