@@ -1,0 +1,29 @@
+<%= form_for(@spartan_basketball) do |f| %>
+  <% if @spartan_basketball.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spartan_basketball.errors.count, "error") %> prohibited this spartan_basketball from being saved:</h2>
+
+      <ul>
+      <% @spartan_basketball.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_name %><br>
+    <%= f.text_field :player_name %>
+  </div>
+  <div class="field">
+    <%= f.label :player_number %><br>
+    <%= f.number_field :player_number %>
+  </div>
+  <div class="field">
+    <%= f.label :has_graduated %><br>
+    <%= f.check_box :has_graduated %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

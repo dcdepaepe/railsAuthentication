@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :spartan_basketballs
+
   root 'static#home'
 
   get '/about' => 'static#about'
 
   get '/cat-pictures(/:number_of_cats)', to: 'static#cats', as: 'cats'
+
+  get '/spartan_basketballs', to: 'spartan_basketballs/indx.html.erb', as: 'spartans'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

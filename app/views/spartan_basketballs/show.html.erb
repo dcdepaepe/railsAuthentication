@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @spartan_basketball.player_name %>
+</p>
+
+<p>
+  <strong>Player number:</strong>
+  <%= @spartan_basketball.player_number %>
+</p>
+
+<p>
+  <strong>Has graduated:</strong>
+  <%= @spartan_basketball.has_graduated %>
+</p>
+
+<%= link_to 'Edit', edit_spartan_basketball_path(@spartan_basketball) %> |
+<%= link_to 'Back', spartan_basketballs_path %>
