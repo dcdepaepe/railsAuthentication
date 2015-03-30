@@ -8,8 +8,7 @@ Rails.application.routes.draw do
 
   get '/cat-pictures(/:number_of_cats)', to: 'static#cats', as: 'cats'
 
-  get '/spartan_basketballs', to: 'spartan_basketballs/indx.html.erb', as: 'spartans'
-
+  get '/spartan_basketballs', to: 'spartan_basketballs#index', as: 'spartans'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
