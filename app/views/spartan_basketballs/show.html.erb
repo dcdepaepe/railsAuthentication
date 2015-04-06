@@ -15,5 +15,7 @@
   <%= @spartan_basketball.has_graduated %>
 </p>
 
-<%= link_to 'Edit', edit_spartan_basketball_path(@spartan_basketball) %> |
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_spartan_basketball_path(@spartan_basketball) %> |
+<% end %>
 <%= link_to 'Back', spartan_basketballs_path %>

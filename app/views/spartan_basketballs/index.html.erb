@@ -19,8 +19,10 @@
         <td><%= spartan_basketball.player_number %></td>
         <td><%= spartan_basketball.has_graduated %></td>
         <td><%= link_to 'Show', spartan_basketball %></td>
-        <td><%= link_to 'Edit', edit_spartan_basketball_path(spartan_basketball) %></td>
-        <td><%= link_to 'Destroy', spartan_basketball, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_spartan_basketball_path(spartan_basketball) %></td>
+          <td><%= link_to 'Destroy', spartan_basketball, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,6 @@
 
 <br>
 
-<%= link_to 'New Spartan basketball', new_spartan_basketball_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Spartan basketball', new_spartan_basketball_path %>
+<% end %>

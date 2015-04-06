@@ -1,5 +1,6 @@
 class SpartanBasketballsController < ApplicationController
   before_action :set_spartan_basketball, only: [:show, :edit, :update, :destroy]
+  before_action :only_allow_signed_in_users, except: [:index, :show]
 
   # GET /spartan_basketballs
   # GET /spartan_basketballs.json

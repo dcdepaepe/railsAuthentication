@@ -12,7 +12,18 @@
     <li><%= link_to 'About', about_path %></li>
     <li><%= link_to 'Cat Pictures', cats_path %></li>
     <li><%= link_to 'Spartan Basketball Players', spartan_basketballs_path %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "Sign Out " + current_user.email, sign_out_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "Sign In", sign_in_path %></li>
+    <% end %>
   </ul>
+
+<% flash.each do |type, message| %>
+  <div class="<%= type %>">
+    <p><%= message %></p>
+  </div>
+<% end %>
 
 <div class="pageContent">
   <div class="currentTime">
